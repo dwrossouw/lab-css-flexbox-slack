@@ -27,7 +27,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 10px;
 }
 
 .navbar {
@@ -43,6 +42,7 @@ nav {
 .navbar img {
   width: 100px;
   height: auto;
+  padding: 20px;
 }
 
 header {
@@ -55,7 +55,8 @@ header {
 .button-container {
   display: flex;
   align-items: flex-end;
-  gap: 10px;
+  gap: 20px;
+  padding: 20px;
 }
 
 .button-container button {
@@ -67,11 +68,15 @@ header {
 header h1 {
   color: white;
   text-align: center;
+  letter-spacing: 1.5px;
+  padding: 0 20px;
+  font-size: 40px;
 }
 
 header p {
   color: white;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 header p span {
@@ -83,22 +88,42 @@ header p span {
   flex-direction: column;
   justify-content: space-evenly;
   gap: 10px;
-  
+  padding: 20px;
 }
 
 .button-container2 button {
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: medium;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 50px; 
-  
+  height: 50px;
+  border-radius: 2px;
+  border-color: none;
+  border-style: none;
 }
 
-.button-container2 img{
-  width: 50px;
+.button-container2 :first-child {
+  color: #540b51;
+}
+
+.button-container2 button:nth-child(2) {
+  background-color: #4285f4;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.button-container2 button:nth-child(2) img {
+  position: absolute;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 2px;
+ 
 }
 
 #testID img {
@@ -117,18 +142,18 @@ main {
   /* min-height: 200px; */
   display: flex;
   flex-direction: column;
-  background-color: #F3EAE2;
+  background-color: #f3eae2;
   gap: 10px;
   padding: 50px 10px;
-} 
+}
 
-.logos p{
+.logos p {
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
 }
 
-.company-logos{
+.company-logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -144,29 +169,145 @@ main {
   width: 200px;
   height: auto;
 }
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  justify-content: center;
+}
+
+.stats h3 {
+  text-align: center;
+  color: #540b51;
+  font-weight: 1000;
+  font-size: 40px;
+  margin-bottom: 0px;
+}
+
+.stats p {
+  font-size: 20px;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.5;
+  margin-top: 10px;
+  /* justify-content: space-between; */
+}
+
+.stats-container {
+  width: 40%;
+  height: auto;
+  align-self: center;
+  color: #540b51;
+  font-weight: 1000;
+}
+
+.stats-container ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.stats-container li p:first-child {
+  font-size: 80px;
+  width: 80%;
+  margin: none;
+  align-self: center;
+}
+
+.stats-container li p:nth-child(2) {
+  width: 300px;
+
+  align-self: center;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  background-color: #540b51;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.welcome h3 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+.welcome button {
+  padding: 10px;
+  margin: 10px;
+  width: 90%;
+  height: 45px;
+  text-transform: uppercase;
+  font-weight: 750;
+  border-radius: 2px;
+  border-color: none;
+  border-style: none;
+  color: #540b51;
+}
+
+.welcome button:nth-child(3) {
+  border-color: white;
+  border-style: solid;
+  background-color: #540b51;
+  border-width: 2px;
+  color: white;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer hr {
+  border: none;
+  border-top: 2px solid #e9e7e7;
+  width: 90%;
+  margin-top: 40px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+.first-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+footer ul li:nth-child(7) {
+  color: #4285f4;
+}
+
+.social-list ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px 20px 0;
+  font-size: 25px;
+}
+
+#trademark {
+  display: flex;
+  margin: 20px;
+  text-align: center;
+}
+
 @media (width < 768px) {
   .navbar ul {
     display: none;
   }
+}
 
-  /* .company-logos {
-    gap: 20px;
-  } */
-
-  /* .company-logos img {
-    width: 90px;
-  } */
-
-  /* .button-container button {
-    border: none;
-    background: none;
-    padding: 0;
-    width: 100px;
-  }  */
-  /* nav img {
+/* nav img {
     width: 100px;
     background-color: #540b51;
     margin: 0;
     padding: 0;
   }  */
-}
