@@ -37,6 +37,14 @@ nav {
 .navbar ul {
   display: flex;
   gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
 }
 
 .navbar img {
@@ -138,7 +146,6 @@ main {
 }
 
 .logos {
-  /* min-height: 200px; */
   display: flex;
   flex-direction: column;
   background-color: #f3eae2;
@@ -197,7 +204,6 @@ main {
   margin: 0 auto;
   line-height: 1.5;
   margin-top: 10px;
-  /* justify-content: space-between; */
 }
 
 .stats-container {
@@ -223,7 +229,6 @@ main {
 
 .stats-container li p:nth-child(2) {
   width: 300px;
-
   align-self: center;
 }
 
@@ -255,7 +260,7 @@ main {
   color: #540b51;
 }
 
-.welcome button:nth-child(3) {
+.welcome button:nth-child(2) {
   border-color: white;
   border-style: solid;
   background-color: #540b51;
@@ -319,19 +324,82 @@ footer ul li:nth-child(7) {
     max-width: none;
     height: 120%;
   }
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+  }
+  .big-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stats h3 {
+    text-align: center;
+    color: #540b51;
+    font-weight: 1000;
+    font-size: 40px;
+    margin-bottom: 0px;
+  }
+
+  .stats p {
+    font-size: 20px;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.5;
+    margin-top: 10px;
+    /* justify-content: space-between; */
+  }
+
+  .stats-container {
+    width: 40%;
+    height: auto;
+    align-self: center;
+    color: #540b51;
+    font-weight: 1000;
+  }
+
+  .stats-container ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .stats-container li p:first-child {
+    font-size: 80px;
+    width: 80%;
+    margin: none;
+    align-self: center;
+  }
+
+  .stats-container li p:nth-child(2) {
+    width: 300px;
+    align-self: center;
+  }
 }
 
-@media (width < 1024px) and (width >= 768px) {
+@media /*(width < 1024px) and */(width >= 768px) {
   .navbar ul {
     display: none;
   }
 
   header {
     flex-direction: row;
+    padding-bottom: 50px;
   }
-
+  
+  header div {
+    width: 80%;
+  }
   header h1 {
     text-align: left;
+    font-size: 60px;
+    max-width: 70%;
   }
 
   header p {
@@ -340,7 +408,7 @@ footer ul li:nth-child(7) {
   }
 
   header > div:first-child {
-    flex: 70%;
+    flex: 50%;
   }
 
   #testID {
@@ -407,10 +475,26 @@ footer ul li:nth-child(7) {
     margin: 0;
   }
 
-  .welcome button {
-    width: 80%;
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
 
+  .welcome > div {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 10px;
+  }
+
+  .welcome button {
+    flex: 1;
+    width: auto;
+    margin: 0;
+  }
+  
   .first-list {
     flex-direction: row;
     justify-content: space-evenly;
@@ -424,12 +508,7 @@ footer ul li:nth-child(7) {
   }
 }
 
-
-@media (width >= 1024px) and (width < 1440px) {
-  body {
-    background-color: yellow;
-  }
-
+@media (width >= 1024px) {
   nav {
     display: flex;
     font-weight: 700;
@@ -442,22 +521,10 @@ footer ul li:nth-child(7) {
     display: flex;
   }
 
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-  }
-
   .button-container {
     display: flex;
     justify-content: start;
     align-items: center;
-  }
-
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
   }
 
   .button-container button:nth-child(2) {
@@ -573,7 +640,7 @@ footer ul li:nth-child(7) {
     align-items: center;
   }
 
-  .welcome  div {
+  .welcome div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -581,23 +648,51 @@ footer ul li:nth-child(7) {
     width: 40%;
   }
 
-  .welcome  div  button {
+  .welcome div button {
     flex: 1;
     margin: 0;
     padding: 15px;
     height: 50px;
     border: none;
     background-color: white;
-  } 
+  }
 
   .welcome div button:nth-child(2) {
-    background-color:#540b51;
-    color:#e9e7e7;
+    background-color: #540b51;
+    color: #e9e7e7;
     border: solid;
     border-width: 2px;
     border-radius: 3px;
   }
-   
+
+  .first-list {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+  }
+
+  .social-list ul {
+    width: 40%;
+    justify-content: space-between;
+    margin: 10px;
+  }
 }
 
+@media (width >= 1440px) {
 
+  .button-container2 {
+    flex-direction: row;
+    width: 70%;
+  }
+  
+  #testID{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #testID img {
+    width: 40%;
+    height: auto;
+    }
+
+}
